@@ -1,0 +1,20 @@
+package com.jspiders.multithreadingproperties.main;
+
+import com.jspiders.multithreadingproperties.thread.MyThread1;
+
+public class ThreadMain {
+	
+	public static void main(String[] args) {
+		
+		MyThread1 myThread1 = new MyThread1();
+		Thread thread = new Thread();
+		
+		thread.setName("Thread2");
+		thread.setPriority(5);
+		
+		System.out.println(thread.getName());
+		System.out.println(thread.getPriority());
+		
+	}
+
+}

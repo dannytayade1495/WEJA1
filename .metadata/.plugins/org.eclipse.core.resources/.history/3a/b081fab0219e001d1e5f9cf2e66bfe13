@@ -1,0 +1,15 @@
+package com.jspiders.multithreading.resource;
+
+public class Account {
+	
+	double accountBalance;
+
+	public Account(double accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+	
+	public double checkBalance() {
+		return this.accountBalance;
+	}
+
+}

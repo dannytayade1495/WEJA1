@@ -1,0 +1,5 @@
+package com.jspiders.multithreadingwaitandnotify.resourse;
+
+public class Pizza {
+
+}

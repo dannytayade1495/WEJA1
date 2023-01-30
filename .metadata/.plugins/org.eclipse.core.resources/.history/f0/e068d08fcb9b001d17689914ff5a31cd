@@ -1,0 +1,7 @@
+package com.jspiders.multithreadingproperties.thread;
+
+public class MyThread extends Thread {
+	
+	
+
+}
