@@ -4,7 +4,7 @@ public class Pizza {
 
 	int noOfPizza;
 
-	public /* synchronized */ void orderPizza(int orderedPizza) {
+	public synchronized void orderPizza(int orderedPizza) {
 		System.out.println("Ordering " + orderedPizza + " pizzas");
 		if (orderedPizza > noOfPizza) {
 			System.out.println(orderedPizza + " pizzas not available");
@@ -16,11 +16,10 @@ public class Pizza {
 			}
 		}
 		noOfPizza -= orderedPizza;
-		System.out.println
-		("Order of " + orderedPizza + " pizzas successfull.");
+		System.out.println("Order of " + orderedPizza + " pizzas successfull.");
 	}
 
-	public /* synchronized */ void makePizza(int bakedPizza) {
+	public synchronized void makePizza(int bakedPizza) {
 		System.out.println("Making " + bakedPizza + " pizzas");
 		noOfPizza += bakedPizza;
 		System.out.println(noOfPizza + " pizzas available");

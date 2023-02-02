@@ -13,7 +13,7 @@ public class PizzaMain {
 		Friends friends1 = new Friends(pizza);
 		Friends friends2 = new Friends(pizza);
 		Dominos dominos = new Dominos(pizza);
-
+		
 		friends1.start();
 		friends2.start();
 		dominos.start();
