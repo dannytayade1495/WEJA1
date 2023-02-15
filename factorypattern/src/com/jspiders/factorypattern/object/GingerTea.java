@@ -1,6 +1,6 @@
-package com.jspiders.factory.object;
+package com.jspiders.factorypattern.object;
 
-import com.jspiders.factory.beverage.Beverage;
+import com.jspiders.factorypattern.beverage.Beverage;
 
 public class GingerTea implements Beverage {
 

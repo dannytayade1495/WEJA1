@@ -1,12 +1,12 @@
-package com.jspiders.factory.main;
+package com.jspiders.factorypattern.main;
 
 import java.util.Scanner;
 
-import com.jspiders.factory.beverage.Beverage;
-import com.jspiders.factory.object.BlackTea;
-import com.jspiders.factory.object.GingerTea;
-import com.jspiders.factory.object.MasalaTea;
-import com.jspiders.factory.object.Tea;
+import com.jspiders.factorypattern.beverage.Beverage;
+import com.jspiders.factorypattern.object.BlackTea;
+import com.jspiders.factorypattern.object.GingerTea;
+import com.jspiders.factorypattern.object.MasalaTea;
+import com.jspiders.factorypattern.object.Tea;
 
 public class TeaFactory {
 
