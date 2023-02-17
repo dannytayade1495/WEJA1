@@ -1,9 +1,0 @@
-package com.jspiders.multithreadingwaitandnotify.thread;
-
-import com.jspiders.multithreadingwaitandnotify.resourse.Pizza;
-
-public class Friends extends Thread {
-	
-	private Pizza pizza;
-
-}

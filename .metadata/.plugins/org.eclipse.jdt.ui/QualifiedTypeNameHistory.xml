@@ -8,4 +8,6 @@
     <fullyQualifiedTypeName name="com.jspiders.multithreadingproperties.thread.MyThread1"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="com.jspiders.multithreadingproperties.thread.MyThread"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
 </qualifiedTypeNameHistroy>
