@@ -9,35 +9,52 @@ import com.jspiders.hibernate.dto.EmployeeDTO;
 
 public class EmployeeDAO {
 
-	public static void main(String[] args) {
-		
-		EntityManagerFactory entityManagerFactory = 
+	private static EntityManagerFactory entityManagerFactory;
+	private static EntityManager entityManager;
+	private static EntityTransaction entityTransaction;
+	
+	private static void openConnection() {
+		entityManagerFactory = 
 				Persistence.createEntityManagerFactory("emp");
-		
-		EntityManager entityManager = 
-				entityManagerFactory.createEntityManager();
-		
-		EntityTransaction entityTransaction = 
-				entityManager.getTransaction();
-		
-		entityTransaction.begin();
-		
-		EmployeeDTO employee1 = new EmployeeDTO();
-		employee1.setId(1);
-		employee1.setName("Champak Chacha");
-		employee1.setEmail("champakchacha@gmail.com");
-		employee1.setContact(9875641231L);
-		
-		entityManager.persist(employee1);
-		
-		entityTransaction.commit();
-		
-		entityManagerFactory.close();
-		entityManager.close();
+
+		entityManager = entityManagerFactory.createEntityManager();
+
+		entityTransaction = entityManager.getTransaction();
+	}
+	
+	private static void closeConnection() {
+		if (entityManagerFactory != null) {
+			entityManagerFactory.close();
+		}
+		if (entityManager != null) {
+			entityManager.close();
+		}
 		if (entityTransaction.isActive()) {
 			entityTransaction.rollback();
 		}
-
 	}
 
+	public static void main(String[] args) {
+
+		try {
+			openConnection();
+
+			entityTransaction.begin();
+
+			EmployeeDTO employee1 = new EmployeeDTO();
+			employee1.setId(4);
+			employee1.setName("Komal");
+			employee1.setEmail("komal@gmail.com");
+			employee1.setContact(9875641531L);
+
+			entityManager.persist(employee1);
+
+			entityTransaction.commit();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeConnection();
+		}
+	}
 }
