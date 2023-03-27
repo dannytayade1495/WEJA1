@@ -51,4 +51,5 @@
     <fullyQualifiedTypeName name="com.jspiders.hibernatejpql.dto.TrainerDTO"/>
     <fullyQualifiedTypeName name="javax.servlet.GenericServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

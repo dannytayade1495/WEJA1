@@ -16,7 +16,7 @@ public class MyServlet1 extends HttpServlet {
 							throws ServletException, IOException {
 		resp.setContentType("text/html");
 		PrintWriter writer = resp.getWriter();
-		writer.println("<h1>My first servlet<h1>");
+		writer.println("<h5>Welcome to MyServlet1<h5>");
 	}
 
 }
