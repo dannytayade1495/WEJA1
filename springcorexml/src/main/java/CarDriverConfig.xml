@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.jspiders.springcorexml.beans.CarBean" name="car1">
+		<property name="id" value="1" />
+		<property name="brand" value="Tata" />
+		<property name="model" value="Nexon" />
+		<property name="regno" value="MH12AB1234" />
+		<property name="driver" ref="driver1" />
+	</bean>
+
+	<bean class="com.jspiders.springcorexml.beans.DriverBean"
+		name="driver1">
+		<property name="id" value="1" />
+		<property name="name" value="Arjun" />
+		<property name="contact" value="9876543210" />
+	</bean>
+
+</beans>
+
+        

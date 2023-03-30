@@ -3,14 +3,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
+
 	<bean class="com.jspiders.springcorexml.beans.EmployeeBean"
 		name="emp1">
 		<property name="id">
 			<value>1</value>
 		</property>
-		<property name="name" value="Shubham"/>
-		<property name="email" value="shubham@gmail.com"/>
+		<property name="name" value="Shubham" />
+		<property name="email" value="shubham@gmail.com" />
+	</bean>
+
+	<bean class="com.jspiders.springcorexml.beans.EmployeeBean"
+		name="emp2">
+		<constructor-arg name="id">
+			<value>2</value>
+		</constructor-arg>
+		<constructor-arg name="name" value="Shubhangi"/>
+		<constructor-arg name="email" value="shubhangi@gmail.com"/>
 	</bean>
 
 </beans>
