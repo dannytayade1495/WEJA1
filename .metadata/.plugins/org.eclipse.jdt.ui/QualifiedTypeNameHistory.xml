@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-    <fullyQualifiedTypeName name="com.jspider.jdbcobject.entity.Student"/>
-    <fullyQualifiedTypeName name="com.jspiders.hibernate.dto.EmployeeDTO"/>
     <fullyQualifiedTypeName name="com.jspiders.hibernateonetoone.dto.AadharDTO"/>
     <fullyQualifiedTypeName name="com.jspiders.hibernateonetoone.dto.PersonDTO"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
@@ -20,7 +17,6 @@
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
     <fullyQualifiedTypeName name="com.jspiders.hibernateannotations.dto.StudentDTO"/>
-    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="com.jspiders.springcoreannotation.beans.CarBean"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 </qualifiedTypeNameHistroy>
