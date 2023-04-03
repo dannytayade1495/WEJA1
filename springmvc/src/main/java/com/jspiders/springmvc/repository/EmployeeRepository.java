@@ -6,7 +6,6 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.web.jsf.FacesContextUtils;
 
 import com.jspiders.springmvc.pojo.EmployeePOJO;
 
