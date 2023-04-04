@@ -47,5 +47,26 @@ public class EmployeeController {
 		map.addAttribute("msg", "Data not added successfully..!!");
 		return "Add";
 	}
+	
+	//Search Page Controller
+	@GetMapping("/search")
+	public String searchPage() {
+		return "Search";
+	}
+	
+	//Search Data Controller
+	@PostMapping("/search")
+	public String search(@RequestParam int id, ModelMap map) {
+		EmployeePOJO employee = service.search(id);
+		if (employee != null) {
+			//Success Response
+			map.addAttribute("msg", "Employee record found successfully..!!");
+			map.addAttribute("emp", employee);
+			return "Search";
+		}
+		//Failure Response
+		map.addAttribute("msg", "Employee record not found..!!");
+		return "Search";
+	}
 
 }

@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
-    <fullyQualifiedTypeName name="com.jspiders.hibernateonetomany.dto.EmployeeDTO"/>
-    <fullyQualifiedTypeName name="com.jspiders.hibernateonetomany.dto.CompanyDTO"/>
-    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
-    <fullyQualifiedTypeName name="com.jspiders.hibernatemanytoone.dto.TrainDTO"/>
     <fullyQualifiedTypeName name="com.jspiders.hibernatemanytoone.dto.PassengerDTO"/>
     <fullyQualifiedTypeName name="com.jspiders.hibernatemanytomany.dto.CustomerDTO"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
@@ -36,7 +31,6 @@
     <fullyQualifiedTypeName name="com.jspiders.springcoreannotation.beans.Car"/>
     <fullyQualifiedTypeName name="com.jspiders.springcoreannotation.beans.Driver"/>
     <fullyQualifiedTypeName name="com.jspiders.springcoreannotation.beans.DriverBean"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
@@ -58,6 +52,12 @@
     <fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
     <fullyQualifiedTypeName name="org.springframework.web.jsf.FacesContextUtils"/>
     <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
-    <fullyQualifiedTypeName name="com.jspiders.springmvc.pojo.EmployeePOJO"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="com.jspiders.springmvc.repository.EmployeeRepository"/>
+    <fullyQualifiedTypeName name="com.jspiders.springmvc.pojo.EmployeePOJO"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.jspiders.springmvc.service.EmployeeService"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
 </qualifiedTypeNameHistroy>
