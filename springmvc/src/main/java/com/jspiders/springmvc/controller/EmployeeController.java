@@ -1,5 +1,7 @@
 package com.jspiders.springmvc.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -12,61 +14,83 @@ import com.jspiders.springmvc.service.EmployeeService;
 
 @Controller
 public class EmployeeController {
-	
+
 	@Autowired
 	private EmployeeService service;
-	
-	//Home Controller
+
+	// Home Controller
 	@GetMapping("/home")
 	public String home() {
 		return "Home";
 	}
-	
-	//Add Page Controller
+
+	// Add Page Controller
 	@GetMapping("/add")
 	public String addPage() {
 		return "Add";
 	}
-	
-	//Add Data Controller
+
+	// Add Data Controller
 	@PostMapping("/add")
-	public String add(@RequestParam String name,
-						@RequestParam String email,
-						@RequestParam long contact,
-						@RequestParam String designation,
-						@RequestParam double salary,
-						ModelMap map) {
-		EmployeePOJO employee = service.
-				addEmployee(name, email, contact, designation, salary);
+	public String add(@RequestParam String name, @RequestParam String email, @RequestParam long contact,
+			@RequestParam String designation, @RequestParam double salary, ModelMap map) {
+		EmployeePOJO employee = service.addEmployee(name, email, contact, designation, salary);
 		if (employee != null) {
-			//Success response
+			// Success response
 			map.addAttribute("msg", "Data added successfully..!!");
 			return "Add";
-		} 
-		//Failure response
+		}
+		// Failure response
 		map.addAttribute("msg", "Data not added successfully..!!");
 		return "Add";
 	}
-	
-	//Search Page Controller
+
+	// Search Page Controller
 	@GetMapping("/search")
 	public String searchPage() {
 		return "Search";
 	}
-	
-	//Search Data Controller
+
+	// Search Data Controller
 	@PostMapping("/search")
 	public String search(@RequestParam int id, ModelMap map) {
 		EmployeePOJO employee = service.search(id);
 		if (employee != null) {
-			//Success Response
+			// Success Response
 			map.addAttribute("msg", "Employee record found successfully..!!");
 			map.addAttribute("emp", employee);
 			return "Search";
 		}
-		//Failure Response
+		// Failure Response
 		map.addAttribute("msg", "Employee record not found..!!");
 		return "Search";
+	}
+
+	// Remove Page Controller
+	@GetMapping("/remove")
+	public String remove(ModelMap map) {
+		List<EmployeePOJO> employees = service.searchAllEmployees();
+		map.addAttribute("empList", employees);
+		return "Remove";
+	}
+	
+	//Remove Data Controller
+	@PostMapping("/remove")
+	public String remove(@RequestParam int id, ModelMap map) {
+		EmployeePOJO employee = service.search(id);
+		if (employee != null) {
+			//Success Response
+			service.removeEmployee(id);
+			List<EmployeePOJO> employees = service.searchAllEmployees();
+			map.addAttribute("empList", employees);
+			map.addAttribute("msg", "Employee removed successfully..!!");
+			return "Remove";
+		}
+		//Failure Response
+		List<EmployeePOJO> employees = service.searchAllEmployees();
+		map.addAttribute("empList", employees);
+		map.addAttribute("msg", "Employee data does not exist..!!");
+		return "Remove";
 	}
 
 }

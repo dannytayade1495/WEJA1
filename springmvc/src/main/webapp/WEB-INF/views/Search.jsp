@@ -12,6 +12,7 @@ EmployeePOJO employee = (EmployeePOJO) request.getAttribute("emp");
 <meta charset="UTF-8">
 <title>Employee Management</title>
 <style type="text/css">
+
 form {
 	margin-top: 10px;
 }
