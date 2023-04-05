@@ -98,4 +98,8 @@ public class EmployeeRepository {
 		closeConnection();
 		return employee;
 	}
+
+	public void login(String username, String password) {
+		
+	}
 }
