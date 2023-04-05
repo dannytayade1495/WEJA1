@@ -36,4 +36,10 @@ public class EmployeeService {
 		repository.removeEmployee(id);
 	}
 
+	public EmployeePOJO updateEmployee(int id, String name, String email, long contact, String designation,
+			double salary) {
+		EmployeePOJO employee = repository.updateEmployee(id, name, email, contact, designation, salary);
+		return employee;
+	}
+
 }

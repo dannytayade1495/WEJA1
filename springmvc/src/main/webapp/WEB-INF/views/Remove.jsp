@@ -65,7 +65,7 @@ body {
 	<div align="center">
 		<form action="./remove" method="post">
 			<fieldset>
-				<legend>:::Search Employee:::</legend>
+				<legend>:::Remove Employee:::</legend>
 				<table>
 					<tr>
 						<td>Enter ID</td>

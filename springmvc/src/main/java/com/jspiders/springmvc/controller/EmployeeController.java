@@ -92,5 +92,54 @@ public class EmployeeController {
 		map.addAttribute("msg", "Employee data does not exist..!!");
 		return "Remove";
 	}
+	
+	//Update Page Controller
+	@GetMapping("/update")
+	public String updatePage(ModelMap map) {
+		List<EmployeePOJO> employees = service.searchAllEmployees();
+		map.addAttribute("empList", employees);
+		return "Update";
+	}
+	
+	//Update Form Controller
+	@PostMapping("/update")
+	public String updateForm(@RequestParam int id, ModelMap map) {
+		EmployeePOJO employee = service.search(id);
+		if (employee != null) {
+			//Success response
+			map.addAttribute("emp", employee);
+			return "Update";
+		}
+		//Failure response
+		map.addAttribute("msg", "Employee record not found..!!");
+		List<EmployeePOJO> employees = service.searchAllEmployees();
+		map.addAttribute("empList", employees);
+		return "Update";
+	}
+	
+	//Update Data Controller
+	@PostMapping("/updateData")
+	public String update(@RequestParam int id,
+							@RequestParam String name,
+							@RequestParam String email,
+							@RequestParam long contact,
+							@RequestParam String designation,
+							@RequestParam double salary,
+							ModelMap map) {
+		EmployeePOJO employee = service.
+				updateEmployee(id, name, email, contact, designation, salary);
+		if (employee != null) {
+			//Success response
+			map.addAttribute("msg", "Employee record updated successfully..!!");
+			List<EmployeePOJO> employees = service.searchAllEmployees();
+			map.addAttribute("empList", employees);
+			return "Update";
+		}
+		//Failure response
+		map.addAttribute("msg", "Employee record not updated..!!");
+		List<EmployeePOJO> employees = service.searchAllEmployees();
+		map.addAttribute("empList", employees);
+		return "Update";
+	}
 
 }

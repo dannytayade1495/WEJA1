@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="com.jspiders.hibernateannotations.dto.StudentDTO"/>
-    <fullyQualifiedTypeName name="javax.persistence.Query"/>
     <fullyQualifiedTypeName name="com.jspiders.hibernatejpql.dto.TrainerDTO"/>
     <fullyQualifiedTypeName name="javax.servlet.GenericServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
@@ -20,7 +19,6 @@
     <fullyQualifiedTypeName name="com.jspiders.springcoreannotation.beans.EmployeeBean"/>
     <fullyQualifiedTypeName name="com.jspiders.springcorexml.beans.DriverBean"/>
     <fullyQualifiedTypeName name="com.jspiders.springcorexml.beans.CarBean"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.jspiders.springcorexml.beans.PlayerBean"/>
     <fullyQualifiedTypeName name="com.jspiders.springcorexml.beans.TeamBean"/>
     <fullyQualifiedTypeName name="com.jspiders.springcorexml.beans.TrainBean"/>
@@ -52,12 +50,14 @@
     <fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
     <fullyQualifiedTypeName name="org.springframework.web.jsf.FacesContextUtils"/>
     <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="com.jspiders.springmvc.repository.EmployeeRepository"/>
-    <fullyQualifiedTypeName name="com.jspiders.springmvc.pojo.EmployeePOJO"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.jspiders.springmvc.service.EmployeeService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.persistence.Query"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
+    <fullyQualifiedTypeName name="com.jspiders.springmvc.pojo.EmployeePOJO"/>
 </qualifiedTypeNameHistroy>
