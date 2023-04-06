@@ -1,5 +1,8 @@
 package com.jspiders.springmvc.repository;
 
+import java.util.Iterator;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -41,13 +44,16 @@ public class AdminRepository {
 		openConnection();
 		transaction.begin();
 		jpql = "from AdminPOJO " 
-				+ "where username = " + username + 
-				" and password = " + password;
+				+ "where username = '" + username + "'" 
+				+ "and password = '" + password + "'";
 		query = manager.createQuery(jpql);
-		AdminPOJO admin = (AdminPOJO) query.getResultList();
-		transaction.commit();
-		closeConnection();
-		return admin;
+		List<AdminPOJO> list = query.getResultList();
+		for (AdminPOJO admin : list) {
+			transaction.commit();
+			closeConnection();
+			return admin;
+		}
+		return null;
 	}
 
 	public AdminPOJO addAdmin(String username, String password) {
