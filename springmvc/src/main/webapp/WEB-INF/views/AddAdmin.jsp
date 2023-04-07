@@ -12,8 +12,7 @@ body {
 	background-size: 100%;
 }
 
-<
-style type ="text /css ">form {
+form {
 	margin-top: 10px;
 }
 
